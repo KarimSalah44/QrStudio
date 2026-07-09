@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>QR44 | QR Studio - صانع أكواد QR احترافي</title>
+
+<meta name="description" content="QR44 - QR Studio هو أفضل موقع لإنشاء وتصميم أكواد QR احترافية بألوان وأشكال مميزة. أنشئ QR Code مجانًا للنصوص والروابط والواي فاي ورقم الهاتف والمزيد.">
+
+<meta name="keywords" content="
+QR44,
+QR Studio,
+QR Studio Pro,
+كيو ار,
+كيو آر,
+كيو ار استوديو,
+كيو ار استديو,
+كيو آر استوديو,
+كيو آر استديو,
+QR,
+QR Code,
+QR Generator,
+QR Maker,
+صانع QR,
+صانع كيو ار,
+مولد QR,
+تصميم QR,
+إنشاء QR,
+QR مجاني,
+باركود,
+QR44 Studio
+">
+
+<meta name="author" content="QR44">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta name="theme-color" content="#0f172a">
+
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="QR44 | QR Studio">
+<meta property="og:description" content="أنشئ أكواد QR احترافية مجانًا مع QR44. تخصيص الألوان، الشعارات، والخلفيات بسهولة.">
+<meta property="og:image" content="https://iili.io/C0cVu44.png">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:locale" content="ar_AR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QR44 | QR Studio">
+<meta name="twitter:description" content="أفضل موقع لإنشاء أكواد QR احترافية.">
+<meta name="twitter:image" content="https://iili.io/C0cVu44.png">
+
+<link rel="icon" href="https://iili.io/C0cVu44.png">
+<link rel="apple-touch-icon" href="https://iili.io/C0cVu44.png">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"QR44",
+ "alternateName":"QR Studio",
+ "url":"https://YOUR-DOMAIN.com/",
+ "description":"أفضل موقع لإنشاء وتصميم أكواد QR احترافية.",
+ "inLanguage":"ar",
+ "keywords":"QR44, QR Studio, كيو ار استوديو, QR Code, صانع QR"
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+/* تحديد الوضع (نهاري/ليلي) قبل الرسم لمنع أي وميض - الوضع الافتراضي عند أول تشغيل هو النهاري */
+(function(){
+  try{
+    var saved = localStorage.getItem('qr_theme');
+    if(saved === 'dark'){
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme','light');
+    }
+  }catch(e){
+    document.documentElement.setAttribute('data-theme','light');
+  }
+})();
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --o:#2196F3;
+  --t:#2196F3;
+  --bg:#0A0E17;--s1:#111827;--s2:#1A2235;--s3:#232D44;
+  --bd:#2A3347;--tx:#E8EDF5;--tm:#7B8BA4;
+  --grad:linear-gradient(135deg,#2196F3,#42A5F5 40%,#1E88E5 75%,#1565C0);
+  --r:18px;--rs:10px;--sh:0 8px 32px rgba(0,0,0,.4);
+}
+[data-theme=light]{
+  --bg:#F0F4FA;--s1:#FFFFFF;--s2:#F5F8FF;--s3:#EBF0FA;
+  --bd:#D0DAEE;--tx:#1A2340;--tm:#5A6A8A;--sh:0 8px 32px rgba(0,0,50,.1);
+}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--tx);min-height:100dvh;overflow-x:hidden;transition:background .3s,color .3s;}
+::-webkit-scrollbar{width:4px;height:4px;}
+::-webkit-scrollbar-thumb{background:var(--bd);border-radius:4px;}
+
+/* HEADER */
+header{background:var(--s1);border-bottom:1px solid var(--bd);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(20px);}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-icon{width:38px;height:38px;background:var(--grad);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;flex-shrink:0;}
+.logo h1{font-size:17px;font-weight:900;}
+.logo h1 span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.logo p{font-size:10px;color:var(--tm);}
+.hdr-acts{display:flex;gap:8px;}
+.icon-btn{width:36px;height:36px;border:1px solid var(--bd);border-radius:10px;background:var(--s2);color:var(--tx);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;transition:all .2s;}
+.icon-btn:hover{border-color:var(--t);color:var(--t);}
+
+/* إزالة تأثير الضغط والتحديد بالكامل */
+button:focus, a:focus, input:focus, textarea:focus, select:focus, .tc:focus, .modc:focus, .frc:focus, .posc:focus, .lsc:focus, .szc:focus, .bgc:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+button:active, a:active {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* BOTTOM NAV */
+.bnav{position:fixed;bottom:0;left:0;right:0;background:var(--s1);border-top:1px solid var(--bd);display:flex;z-index:200;padding-bottom:env(safe-area-inset-bottom);}
+.bnav-btn{flex:1;padding:10px 4px 8px;border:none;background:none;color:var(--tm);font-family:'Cairo',sans-serif;font-size:9px;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:all .2s;position:relative;}
+.bnav-btn i{font-size:19px;}
+.bnav-btn.active{color:var(--o);}
+.bnav-btn.active::after{content:'';position:absolute;bottom:0;left:20%;right:20%;height:2px;background:var(--grad);border-radius:2px;}
+.bnav-dot{position:absolute;top:6px;right:calc(50% - 16px);width:7px;height:7px;background:var(--o);border-radius:50%;border:2px solid var(--s1);display:none;}
+.bnav-dot.show{display:block;}
+
+/* PAGES */
+.page{display:none;padding-bottom:80px;}
+.page.active{display:block;}
+.wrap{max-width:480px;margin:0 auto;padding:14px 14px 0;}
+
+/* CARD */
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:16px;margin-bottom:12px;}
+.ct{font-size:11px;font-weight:700;color:var(--tm);letter-spacing:.8px;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.ct i{color:var(--o);font-size:13px;}
+
+/* INPUTS */
+label{display:block;font-size:12px;color:var(--tm);margin-bottom:5px;font-weight:700;}
+input[type=text],input[type=url],textarea,select{width:100%;background:var(--s2);border:1.5px solid var(--bd);border-radius:var(--rs);padding:11px 13px;color:var(--tx);font-family:'Cairo',sans-serif;font-size:13px;outline:none;transition:border-color .2s,box-shadow .2s;direction:ltr;}
+input:focus,textarea:focus,select:focus{border-color:var(--t);box-shadow:none;}
+textarea{resize:vertical;min-height:72px;}
+.field{margin-bottom:12px;}
+select option{background:var(--s2);}
+
+/* TYPE */
+.type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:14px;}
+.tc{background:var(--s2);border:1.5px solid var(--bd);border-radius:var(--rs);padding:9px 5px;text-align:center;cursor:pointer;transition:all .2s;font-size:10px;font-weight:700;color:var(--tm);font-family:'Cairo',sans-serif;}
+.tc i{font-size:18px;display:block;margin-bottom:3px;}
+.tc.on{border-color:var(--t);background:rgba(33,150,243,.1);color:var(--t);}
+
+/* SCROLL ROWS */
+.hscroll{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+.hscroll::-webkit-scrollbar{display:none;}
+
+/* STYLE CHIPS */
+.sc{flex-shrink:0;width:82px;border:2px solid var(--bd);border-radius:var(--rs);padding:8px 6px;cursor:pointer;text-align:center;font-size:10px;font-weight:700;font-family:'Cairo',sans-serif;color:var(--tm);transition:all .2s;}
+.sc.on{border-color:var(--o);color:var(--tx);}
+.sc .sw{height:22px;border-radius:5px;margin-bottom:5px;}
+
+.sw-mix{background:linear-gradient(135deg,#FF00FF,#00FFFF,#00FF00);}
+.sw-bw{background:#000;}
+.sw-tl{background:linear-gradient(135deg,#1E88E5,#1565C0);}
+.sw-fi{background:linear-gradient(135deg,#FF4500,#FFD700);}
+.sw-oc{background:linear-gradient(135deg,#0099F7,#00E5FF);}
+.sw-pu{background:linear-gradient(135deg,#7B2FF7,#F72585);}
+.sw-gd{background:linear-gradient(135deg,#FFD700,#FF6B00);}
+.sw-eo{background:linear-gradient(135deg,#11998E,#38EF7D);}
+.sw-pi{background:linear-gradient(135deg,#F72585,#FF8FAB);}
+
+/* MOD SHAPE */
+.mod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;}
+.modc{background:var(--s2);border:1.5px solid var(--bd);border-radius:var(--rs);padding:8px 5px;cursor:pointer;text-align:center;font-size:10px;font-weight:700;color:var(--tm);font-family:'Cairo',sans-serif;transition:all .2s;}
+.modc.on{border-color:var(--o);color:var(--tx);}
+.modc canvas{display:block;margin:0 auto 4px;}
+
+/* FRAME CHIPS */
+.frc{flex-shrink:0;width:82px;border:2px solid var(--bd);border-radius:var(--rs);padding:8px 6px;cursor:pointer;text-align:center;font-size:10px;font-weight:700;font-family:'Cairo',sans-serif;color:var(--tm);transition:all .2s;}
+.frc.on{border-color:var(--o);color:var(--tx);}
+.frc .frp{height:48px;border-radius:6px;margin-bottom:5px;display:flex;align-items:center;justify-content:center;font-size:26px;background:var(--s3);}
+
+/* POS GRID */
+.pos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+.posc{background:var(--s2);border:1.5px solid var(--bd);border-radius:var(--rs);padding:8px 5px;text-align:center;cursor:pointer;font-size:10px;font-weight:700;color:var(--tm);font-family:'Cairo',sans-serif;transition:all .2s;}
+.posc i{display:block;margin-bottom:3px;font-size:13px;}
+.posc.on{border-color:var(--t);color:var(--t);background:rgba(33,150,243,.1);}
+.posc.mid-placeholder{visibility:hidden;pointer-events:none;}
+
+/* LOGO SHAPE */
+.lshape-row{display:flex;gap:8px;flex-wrap:wrap;}
+.lsc{padding:7px 12px;background:var(--s2);border:1.5px solid var(--bd);border-radius:20px;font-size:11px;font-weight:700;font-family:'Cairo',sans-serif;color:var(--tm);cursor:pointer;transition:all .2s;}
+.lsc.on{background:rgba(33,150,243,.12);border-color:var(--t);color:var(--t);}
+
+/* SIZE */
+.size-row{display:flex;gap:7px;flex-wrap:wrap;}
+.szc{padding:7px 13px;background:var(--s2);border:1.5px solid var(--bd);border-radius:20px;font-size:11px;font-weight:700;font-family:'Cairo',sans-serif;color:var(--tm);cursor:pointer;transition:all .2s;}
+.szc.on{background:rgba(33,150,243,.12);border-color:var(--o);color:var(--o);}
+
+/* LOGO UPLOAD */
+.lu{border:2px dashed var(--bd);border-radius:var(--rs);padding:16px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
+.lu:hover{border-color:var(--t);background:rgba(33,150,243,.04);}
+.lu input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.lu i{font-size:24px;color:var(--tm);margin-bottom:6px;display:block;}
+.lu p{font-size:12px;color:var(--tm);}
+#lp-img{width:56px;height:56px;object-fit:contain;border-radius:8px;border:2px solid var(--bd);margin:0 auto 6px;display:block;}
+
+/* RANGE */
+input[type=range]{width:100%;height:5px;border-radius:3px;background:var(--bd);outline:none;-webkit-appearance:none;appearance:none;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--o);cursor:pointer;}
+.range-row{display:flex;align-items:center;gap:10px;}
+.range-val{font-size:13px;font-weight:700;color:var(--o);min-width:38px;text-align:center;}
+
+/* COLOR */
+input[type=color]{width:32px;height:32px;padding:2px;border:1.5px solid var(--bd);border-radius:8px;background:none;cursor:pointer;}
+.color-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.color-row label{margin:0;font-size:11px;}
+
+/* BG COLORS */
+.bg-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.bgc{width:28px;height:28px;border-radius:7px;cursor:pointer;border:2px solid transparent;transition:all .2s;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.bgc.on{border-color:var(--o);transform:scale(1.15);}
+
+/* SDIV */
+.sdiv{display:flex;align-items:center;gap:8px;margin:12px 0 8px;}
+.sdiv span{font-size:10px;font-weight:700;color:var(--tm);white-space:nowrap;}
+.sdiv::before,.sdiv::after{content:'';flex:1;height:1px;background:var(--bd);}
+
+/* TOGGLE */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:4px 0;}
+.toggle-lbl{font-size:12px;font-weight:700;color:var(--tm);}
+.toggle{position:relative;width:42px;height:24px;flex-shrink:0;}
+.toggle input{opacity:0;width:0;height:0;}
+.tslider{position:absolute;inset:0;background:var(--bd);border-radius:12px;transition:.3s;cursor:pointer;}
+.tslider::before{content:'';position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;}
+.toggle input:checked+.tslider{background:linear-gradient(135deg,#2196F3,#1E88E5);}
+.toggle input:checked+.tslider::before{transform:translateX(18px);}
+
+/* GENERATE */
+.btn-gen{width:100%;padding:15px;background:var(--grad);border:none;border-radius:var(--r);color:#fff;font-family:'Cairo',sans-serif;font-size:15px;font-weight:900;cursor:pointer;transition:box-shadow .15s;box-shadow:0 4px 24px rgba(33,150,243,.35);}
+.btn-gen:active{transform:none !important;}
+
+/* ACTION BTNS */
+.ba{padding:11px;border:1.5px solid var(--bd);border-radius:var(--rs);background:var(--s2);color:var(--tx);font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .2s;}
+.ba:hover{border-color:var(--t);color:var(--t);}
+.ba.pri{background:rgba(33,150,243,.12);border-color:var(--t);color:var(--t);}
+.ba.danger{border-color:#F72585;color:#F72585;}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+
+/* ⭐⭐⭐ توسيط ومجاوبة الإطارات (Responsive Frames) ⭐⭐⭐ */
+.preview-center,
+.frame-bag, .frame-coffee, .frame-gift, .frame-phone,
+.frame-card, .frame-ig, .frame-star, .frame-none {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;          /* يمنع أي تسرب */
+}
+
+.preview-center {
+  margin-bottom: 12px;
+}
+
+/* جعل الـ canvas داخل أي إطار متجاوباً */
+.frame-bag canvas,
+.frame-coffee canvas,
+.frame-gift canvas,
+.frame-phone canvas,
+.frame-card canvas,
+.frame-ig canvas,
+.frame-star canvas,
+.frame-none canvas,
+#preview-center canvas {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* تحسين النصوص أسفل الباركود */
+.qrl {
+  text-align: center;
+  margin-top: 0.8em;
+  font-weight: 700;
+}
+.qrl.ar { font-size: 14px; direction: rtl; color: #444; }
+.qrl.en { font-size: 10px; color: #888; }
+
+/* ⭐ تعديل العناصر الزائفة (Pseudo‑elements) لتكون نسبية ⭐ */
+/* حقيبة التسوق (مقبض) */
+.frame-bag {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--sh);
+  position: relative;
+}
+.frame-bag::before {
+  content: '';
+  position: absolute;
+  top: -0.8em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  max-width: 60px;
+  height: 1.2em;
+  border: 4px solid #C0A060;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+}
+.frame-bag .fd1, .frame-bag .fd2 {
+  position: absolute;
+  top: -0.3em;
+  width: 0.6em;
+  height: 0.6em;
+  background: var(--o);
+  border-radius: 50%;
+}
+.frame-bag .fd1 { left: 26%; }
+.frame-bag .fd2 { right: 26%; }
+
+/* هدية */
+.frame-gift {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--sh);
+  border: 3px solid #F72585;
+  position: relative;
+}
+.frame-gift::before {
+  content: '🎀';
+  position: absolute;
+  top: -0.8em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+}
+
+/* موبايل */
+.frame-phone {
+  background: #1A1A2E;
+  border-radius: 28px;
+  padding: 22px 16px 28px;
+  box-shadow: var(--sh);
+  border: 4px solid #333;
+  position: relative;
+}
+.frame-phone::before {
+  content: '';
+  position: absolute;
+  top: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  max-width: 38px;
+  height: 0.25em;
+  background: #444;
+  border-radius: 2px;
+}
+.frame-phone::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.2em;
+  height: 1.2em;
+  border: 0.2em solid #444;
+  border-radius: 50%;
+}
+
+/* ألوان نصوص الموبايل */
+.frame-phone .qrl { color: #ccc !important; }
+
+/* قهوة */
+.frame-coffee {
+  background: #3E2006;
+  border-radius: 50% 50% 44% 44% / 40% 40% 60% 60%;
+  padding: 24px 18px 32px;
+  box-shadow: var(--sh);
+  position: relative;
+  border: 4px solid #6B3A1F;
+}
+.frame-coffee .qrl { color: #FFD9A0 !important; }
+
+/* بطاقة */
+.frame-card {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--sh);
+}
+.frame-card .qrl { color: #aaa !important; }
+
+/* انستغرام */
+.frame-ig {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: var(--sh);
+}
+.frame-ig .qrl { color: #fff !important; }
+
+/* فضاء */
+.frame-star {
+  background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--sh);
+  position: relative;
+  overflow: hidden;
+}
+.frame-star::before {
+  content: '✦ ✦ ✦';
+  position: absolute;
+  top: 0.4em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.8em;
+  color: rgba(255, 220, 100, 0.5);
+}
+.frame-star .qrl { color: #FFD700 !important; }
+
+/* بدون إطار */
+.frame-none {
+  background: transparent;
+  padding: 0;
+}
+
+/* INFO */
+.info-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--bd);}
+.info-item:last-child{border-bottom:none;}
+.info-item i{color:var(--o);margin-top:2px;font-size:13px;flex-shrink:0;}
+.info-txt{flex:1;min-width:0;}
+.info-lbl{font-size:10px;color:var(--tm);font-weight:700;}
+.info-val{font-size:13px;word-break:break-all;direction:ltr;}
+
+/* LOG */
+.stats-g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;}
+.stat-c{background:var(--s1);border:1px solid var(--bd);border-radius:var(--rs);padding:12px 8px;text-align:center;}
+.stat-n{font-size:22px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.stat-l{font-size:10px;color:var(--tm);margin-top:1px;}
+.le{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--bd);cursor:pointer;transition:background .2s;border-radius:8px;padding-inline:6px;}
+.le:hover{background:var(--s2);}
+.le:last-child{border-bottom:none;}
+.le-ico{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.le-info{flex:1;min-width:0;}
+.le-name{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.le-meta{font-size:10px;color:var(--tm);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;direction:ltr;}
+.le-time{font-size:10px;color:var(--tm);flex-shrink:0;}
+.empty-s{text-align:center;padding:44px 20px;color:var(--tm);}
+.empty-s i{font-size:44px;margin-bottom:12px;display:block;color:var(--bd);}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--s1);border-radius:24px 24px 0 0;padding:20px;width:100%;max-width:480px;transform:translateY(30px);transition:transform .3s;max-height:90dvh;overflow-y:auto;}
+.modal-overlay.open .modal{transform:translateY(0);}
+.modal-handle{width:36px;height:4px;background:var(--bd);border-radius:2px;margin:0 auto 16px;}
+.modal-title{font-size:16px;font-weight:900;margin-bottom:14px;text-align:center;}
+
+/* CONFIRM MODAL (centered popup, not bottom sheet) */
+#confirm-overlay{align-items:center;}
+#confirm-overlay .modal{border-radius:24px;max-width:340px;text-align:center;transform:translateY(0) scale(.92);opacity:0;transition:transform .25s,opacity .25s;}
+#confirm-overlay.open .modal{transform:translateY(0) scale(1);opacity:1;}
+.confirm-ico{width:56px;height:56px;border-radius:50%;background:rgba(247,37,133,.12);color:#F72585;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 14px;}
+.confirm-msg{font-size:13px;color:var(--tm);line-height:1.8;margin-bottom:6px;}
+
+/* TOAST */
+#toast{position:fixed;bottom:76px;left:50%;transform:translateX(-50%) translateY(16px);background:var(--s1);border:1px solid var(--t);color:var(--t);padding:10px 20px;border-radius:28px;font-size:12px;font-weight:700;opacity:0;transition:all .3s;z-index:999;white-space:nowrap;font-family:'Cairo',sans-serif;pointer-events:none;box-shadow:var(--sh);display:flex;align-items:center;gap:8px;}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+#toast.err{border-color:#F72585;color:#F72585;}
+
+/* LOADING */
+.gen-loading{display:flex;align-items:center;justify-content:center;gap:10px;padding:20px;color:var(--tm);font-size:13px;}
+.spinner{width:20px;height:20px;border:3px solid var(--bd);border-top-color:var(--o);border-radius:50%;animation:spin .7s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ⭐⭐⭐ DESKTOP VIEW - نظام الأعمدة (Masonry) ⭐⭐⭐ */
+@media (min-width: 768px) {
+  .wrap { max-width: 1000px; padding: 24px; }
+  body { padding-bottom: 0; }
+
+  .bnav {
+    position: static; border-top: none; border-bottom: 1px solid var(--bd);
+    justify-content: center; gap: 40px; background: transparent; padding: 12px 0; margin-bottom: 24px;
+  }
+  .bnav-btn { flex: none; padding: 16px 20px; font-size: 15px; flex-direction: row; gap: 8px; }
+  .bnav-btn i { font-size: 16px; }
+  .bnav-btn.active::after { left: 0; right: 0; height: 3px; }
+
+  #pg-create .wrap {
+    display: block;
+    column-count: 2;
+    column-gap: 20px;
+  }
+  
+  .card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .btn-gen {
+    column-span: all;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto 40px auto;
+  }
+
+  #pg-create, #pg-preview, #pg-log { padding-bottom: 0; }
+  .page { padding-bottom: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon"><i class="fas fa-qrcode"></i></div>
+    <div>
+      <h1><span>QR</span> Studio Pro</h1>
+      <p>باركود احترافي بلمسة فنية</p>
+    </div>
+  </div>
+  <div class="hdr-acts">
+    <button class="icon-btn" onclick="toggleTheme()" id="theme-btn"><i class="fas fa-moon"></i></button>
+    <button class="icon-btn" onclick="openPage('log')"><i class="fas fa-history"></i></button>
+  </div>
+</header>
+
+<!-- شريط التنقل: إنشاء → معاينة → السجل -->
+<nav class="bnav">
+  <button class="bnav-btn active" id="nav-create" onclick="openPage('create')"><i class="fas fa-plus-circle"></i>إنشاء</button>
+  <button class="bnav-btn" id="nav-preview" onclick="openPage('preview')"><i class="fas fa-eye"></i>معاينة</button>
+  <button class="bnav-btn" id="nav-log" onclick="openPage('log')"><i class="fas fa-history"></i>السجل<span class="bnav-dot" id="log-dot"></span></button>
+</nav>
+
+<!-- ══ CREATE ══ -->
+<div class="page active" id="pg-create"><div class="wrap">
+
+  <div class="card">
+    <div class="ct"><i class="fas fa-layer-group"></i> نوع المحتوى</div>
+    <div class="type-grid">
+      <div class="tc on" onclick="selType(this,'link')"><i class="fas fa-link"></i>رابط</div>
+      <div class="tc" onclick="selType(this,'whatsapp')"><i class="fab fa-whatsapp"></i>واتساب</div>
+      <div class="tc" onclick="selType(this,'text')"><i class="fas fa-font"></i>نص</div>
+      <div class="tc" onclick="selType(this,'phone')"><i class="fas fa-phone"></i>هاتف</div>
+      <div class="tc" onclick="selType(this,'email')"><i class="fas fa-envelope"></i>إيميل</div>
+      <div class="tc" onclick="selType(this,'location')"><i class="fas fa-map-marker-alt"></i>موقع</div>
+    </div>
+    <div id="inp-link"><div class="field"><label>الرابط (URL)</label><input type="url" id="v-link" placeholder="https://example.com" dir="ltr"></div></div>
+    <div id="inp-whatsapp" style="display:none">
+      <div class="field"><label>رقم الواتساب</label><input type="text" id="v-wa" placeholder="+201234567890" dir="ltr"></div>
+      <div class="field"><label>رسالة تلقائية</label><textarea id="v-wa-msg" placeholder="مرحباً..."></textarea></div>
+    </div>
+    <div id="inp-text" style="display:none"><div class="field"><label>النص</label><textarea id="v-text" placeholder="اكتب أي نص..."></textarea></div></div>
+    <div id="inp-phone" style="display:none"><div class="field"><label>رقم الهاتف</label><input type="text" id="v-phone" placeholder="+201234567890" dir="ltr"></div></div>
+    <div id="inp-email" style="display:none">
+      <div class="field"><label>البريد الإلكتروني</label><input type="text" id="v-email" placeholder="info@example.com" dir="ltr"></div>
+      <div class="field"><label>الموضوع</label><input type="text" id="v-email-sub" placeholder="موضوع الرسالة" dir="rtl"></div>
+    </div>
+    <div id="inp-location" style="display:none">
+      <div class="field"><label>خط العرض</label><input type="text" id="v-lat" placeholder="30.0444" dir="ltr"></div>
+      <div class="field"><label>خط الطول</label><input type="text" id="v-lng" placeholder="31.2357" dir="ltr"></div>
+    </div>
+    <div class="field"><label><i class="fas fa-tag" style="color:var(--o)"></i> اسم الباركود</label><input type="text" id="v-name" placeholder="مثال: QR Code" dir="rtl"></div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><i class="fas fa-palette"></i> ألوان الباركود</div>
+    <div class="hscroll">
+      <div class="sc on" onclick="selStyle(this,'bw')"><div class="sw sw-bw"></div>كلاسيك</div>
+      <div class="sc" onclick="selStyle(this,'mix')"><div class="sw sw-mix"></div>ميكس مبهج</div>
+      <div class="sc" onclick="selStyle(this,'tl')"><div class="sw sw-tl"></div>تيل</div>
+      <div class="sc" onclick="selStyle(this,'fi')"><div class="sw sw-fi"></div>نار 🔥</div>
+      <div class="sc" onclick="selStyle(this,'oc')"><div class="sw sw-oc"></div>أوشن 🌊</div>
+      <div class="sc" onclick="selStyle(this,'pu')"><div class="sw sw-pu"></div>بنفسجي</div>
+      <div class="sc" onclick="selStyle(this,'gd')"><div class="sw sw-gd"></div>ذهبي</div>
+      <div class="sc" onclick="selStyle(this,'eo')"><div class="sw sw-eo"></div>زمرد</div>
+      <div class="sc" onclick="selStyle(this,'pi')"><div class="sw sw-pi"></div>روز 🌸</div>
+    </div>
+    <div class="sdiv"><span>ألوان مخصصة</span></div>
+    <div class="color-row">
+      <label>لون أول</label><input type="color" id="cc1" value="#2196F3">
+      <label>لون ثاني</label><input type="color" id="cc2" value="#1E88E5">
+      <button class="ba" style="padding:6px 12px;font-size:11px;" onclick="applyCustom()">تطبيق</button>
+    </div>
+    <div class="sdiv"><span>لون الخلفية</span></div>
+    <div class="bg-row">
+      <div class="bgc on" style="background:#fff;border:1.5px solid #ccc;" onclick="selBg(this,'#ffffff')" title="أبيض"></div>
+      <div class="bgc" style="background:#111;" onclick="selBg(this,'#111111')" title="أسود"></div>
+      <div class="bgc" style="background:#FFF9F0;" onclick="selBg(this,'#FFF9F0')" title="كريم"></div>
+      <div class="bgc" style="background:#F0FFF4;" onclick="selBg(this,'#F0FFF4')" title="نعناعي"></div>
+      <div class="bgc" style="background:#FFF0F5;" onclick="selBg(this,'#FFF0F5')" title="وردي"></div>
+      <input type="color" id="bg-custom" value="#ffffff" title="مخصص" onchange="selBg(null,this.value)">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><i class="fas fa-shapes"></i> شكل وحدات الباركود</div>
+    <div class="mod-grid">
+      <div class="modc on" onclick="selMod(this,'square')"><canvas width="32" height="32" id="prev-square"></canvas>مربعات</div>
+      <div class="modc" onclick="selMod(this,'rounded')"><canvas width="32" height="32" id="prev-rounded"></canvas>مدوّر</div>
+      <div class="modc" onclick="selMod(this,'dots')"><canvas width="32" height="32" id="prev-dots"></canvas>نقاط</div>
+      <div class="modc" onclick="selMod(this,'classy')"><canvas width="32" height="32" id="prev-classy"></canvas>كلاسي</div>
+    </div>
+    <div class="sdiv"><span>حجم المودول</span></div>
+    <div class="range-row">
+      <input type="range" id="mod-scale" min="70" max="110" value="100" oninput="document.getElementById('msv').textContent=this.value+'%'">
+      <div class="range-val" id="msv">100%</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><i class="fas fa-border-all"></i> إطار الباركود</div>
+    <div class="hscroll">
+      <div class="frc on" onclick="selFrame(this,'none')"><div class="frp"><i class="fas fa-ban"></i></div>بدون</div>
+      <div class="frc" onclick="selFrame(this,'bag')"><div class="frp"><i class="fas fa-shopping-bag"></i></div>كيس تسوق</div>
+      <div class="frc" onclick="selFrame(this,'gift')"><div class="frp"><i class="fas fa-gift"></i></div>هدية</div>
+      <div class="frc" onclick="selFrame(this,'coffee')"><div class="frp"><i class="fas fa-coffee"></i></div>قهوة</div>
+      <div class="frc" onclick="selFrame(this,'phone')"><div class="frp"><i class="fas fa-mobile-alt"></i></div>موبايل</div>
+      <div class="frc" onclick="selFrame(this,'card')"><div class="frp"><i class="fas fa-credit-card"></i></div>بطاقة</div>
+      <div class="frc" onclick="selFrame(this,'ig')"><div class="frp"><i class="fab fa-instagram"></i></div>انستجرام</div>
+      <div class="frc" onclick="selFrame(this,'star')"><div class="frp"><i class="fas fa-star"></i></div>فضاء</div>
+    </div>
+    <div class="sdiv"><span>نص الإطار</span></div>
+    <div class="field"><input type="text" id="frame-ar" value="إمسحني ضوئياً! ✦" dir="rtl"></div>
+    <div class="field"><input type="text" id="frame-en" value="Scan me!" dir="ltr"></div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><i class="fas fa-image"></i> لوجو داخل الباركود</div>
+    <div class="lu">
+      <input type="file" id="logo-inp" accept="image/*" onchange="handleLogo(this)">
+      <div id="logo-ph"><i class="fas fa-cloud-upload-alt"></i><p>اضغط لرفع اللوجو<br><small>PNG شفاف أفضل</small></p></div>
+      <img id="lp-img" src="" style="display:none">
+      <p id="lp-name" style="font-size:10px;color:var(--t);display:none;margin-top:4px;"></p>
+    </div>
+    <div class="sdiv"><span>شكل اللوجو</span></div>
+    <div class="lshape-row">
+      <div class="lsc on" onclick="selLS(this,'rounded')">مدوّر</div>
+      <div class="lsc" onclick="selLS(this,'circle')">دائرة</div>
+      <div class="lsc" onclick="selLS(this,'square')">مربع</div>
+      <div class="lsc" onclick="selLS(this,'none')">بدون إطار</div>
+    </div>
+    <div class="sdiv"><span>حجم اللوجو</span></div>
+    <div class="range-row">
+      <input type="range" id="logo-size" min="12" max="32" value="22" oninput="document.getElementById('lsv').textContent=this.value+'%'">
+      <div class="range-val" id="lsv">22%</div>
+    </div>
+    <div class="sdiv"><span>موضع اللوجو</span></div>
+    <div class="pos-grid">
+      <div class="posc" onclick="selPos(this,'tl')"><i class="fas fa-arrow-up-left"></i>أعلى يسار</div>
+      <div class="posc" onclick="selPos(this,'tc')"><i class="fas fa-arrow-up"></i>أعلى وسط</div>
+      <div class="posc" onclick="selPos(this,'tr')"><i class="fas fa-arrow-up-right"></i>أعلى يمين</div>
+      <div class="posc" onclick="selPos(this,'ml')"><i class="fas fa-arrow-left"></i>يسار وسط</div>
+      <div class="posc on" onclick="selPos(this,'cc')"><i class="fas fa-crosshairs"></i>المنتصف</div>
+      <div class="posc" onclick="selPos(this,'mr')"><i class="fas fa-arrow-right"></i>يمين وسط</div>
+      <div class="posc" onclick="selPos(this,'bl')"><i class="fas fa-arrow-down-left"></i>أسفل يسار</div>
+      <div class="posc" onclick="selPos(this,'bc')"><i class="fas fa-arrow-down"></i>أسفل وسط</div>
+      <div class="posc" onclick="selPos(this,'br')"><i class="fas fa-arrow-down-right"></i>أسفل يمين</div>
+    </div>
+    <div class="field" style="margin-top:10px;">
+      <div class="toggle-row">
+        <span class="toggle-lbl">خلفية بيضاء للوجو</span>
+        <label class="toggle"><input type="checkbox" id="logo-bg" checked><span class="tslider"></span></label>
+      </div>
+    </div>
+    <button class="ba danger" style="width:100%;margin-top:8px;" onclick="askDeleteLogo()"><i class="fas fa-trash"></i> حذف اللوجو</button>
+  </div>
+
+  <div class="card">
+    <div class="ct"><i class="fas fa-expand-arrows-alt"></i> الحجم والجودة</div>
+    <div class="size-row">
+      <div class="szc" onclick="selSz(this,150)">صغير<br><small>150px</small></div>
+      <div class="szc on" onclick="selSz(this,260)">متوسط<br><small>260px</small></div>
+      <div class="szc" onclick="selSz(this,360)">كبير<br><small>360px</small></div>
+      <div class="szc" onclick="selSz(this,512)">HD<br><small>512px</small></div>
+    </div>
+    <div class="sdiv"><span>مستوى تصحيح الخطأ</span></div>
+    <select id="ec-level" style="direction:rtl;">
+      <option value="L">منخفض (L) – بيانات أكثر</option>
+      <option value="M">متوسط (M)</option>
+      <option value="Q">عالي (Q)</option>
+      <option value="H" selected>أعلى (H) – للوجو</option>
+    </select>
+  </div>
+
+  <button class="btn-gen" id="gen-btn" onclick="generateQR()"><i class="fas fa-magic"></i> إنشاء الباركود الآن</button>
+  <div style="height:10px;"></div>
+</div></div>
+
+<!-- ══ PREVIEW ══ -->
+<div class="page" id="pg-preview"><div class="wrap">
+  <div id="qr-result">
+    <div class="card" style="text-align:center;padding:24px 16px;">
+      <div class="preview-center" id="preview-center">
+        <!-- QR with frame injected here -->
+      </div>
+      <div class="acts">
+        <button class="ba pri" onclick="dlQR()"><i class="fas fa-download"></i> تحميل PNG</button>
+        <button class="ba" onclick="shareQR()"><i class="fas fa-share-alt"></i> مشاركة</button>
+        <button class="ba" onclick="dlWithFrame()"><i class="fas fa-border-all"></i> مع الإطار</button>
+        <button class="ba" onclick="copyLink()"><i class="fas fa-copy"></i> نسخ الرابط</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct"><i class="fas fa-info-circle"></i> معلومات الباركود</div>
+      <div class="info-item"><i class="fas fa-tag"></i><div class="info-txt"><div class="info-lbl">الاسم</div><div class="info-val" id="inf-name">—</div></div></div>
+      <div class="info-item"><i class="fas fa-link"></i><div class="info-txt"><div class="info-lbl">المحتوى</div><div class="info-val" id="inf-url"></div></div></div>
+      <div class="info-item"><i class="fas fa-calendar"></i><div class="info-txt"><div class="info-lbl">التاريخ</div><div class="info-val" id="inf-date"></div></div></div>
+      <div class="info-item"><i class="fas fa-ruler"></i><div class="info-txt"><div class="info-lbl">الحجم</div><div class="info-val" id="inf-size"></div></div></div>
+    </div>
+  </div>
+  <div id="qr-empty" style="padding:56px 0;text-align:center;color:var(--tm);">
+    <i class="fas fa-qrcode" style="font-size:56px;display:block;margin-bottom:14px;color:var(--bd);"></i>
+    <p style="font-size:14px;line-height:2;">أنشئ الباركود أولاً<br>من تبويب <strong style="color:var(--o)">إنشاء</strong></p>
+  </div>
+</div></div>
+
+<!-- ══ LOG ══ -->
+<div class="page" id="pg-log"><div class="wrap">
+  <div class="stats-g">
+    <div class="stat-c"><div class="stat-n" id="st-tot">0</div><div class="stat-l">إجمالي</div></div>
+    <div class="stat-c"><div class="stat-n" id="st-day">0</div><div class="stat-l">اليوم</div></div>
+    <div class="stat-c"><div class="stat-n" id="st-typ">0</div><div class="stat-l">أنواع</div></div>
+  </div>
+  <div class="card">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+      <div class="ct" style="margin:0;"><i class="fas fa-history"></i> سجل الباركودات</div>
+      <button class="ba danger" style="padding:5px 10px;font-size:11px;" onclick="askClearLog()"><i class="fas fa-trash"></i> مسح</button>
+    </div>
+    <div id="log-list"><div class="empty-s"><i class="fas fa-clipboard-list"></i><p>لا يوجد باركودات بعد</p></div></div>
+  </div>
+</div></div>
+
+<!-- MODAL: تفاصيل عنصر من السجل -->
+<div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-title" id="modal-title"></div>
+    <div style="text-align:center;margin-bottom:14px;" id="modal-qr-area"></div>
+    <div id="modal-info"></div>
+    <div class="acts" style="margin-top:14px;">
+      <button class="ba pri" onclick="dlModal()"><i class="fas fa-download"></i> تحميل</button>
+      <button class="ba" onclick="copyModalLink()"><i class="fas fa-copy"></i> نسخ الرابط</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: تأكيد الحذف (منبثقة احترافية بدلاً من confirm العادية) -->
+<div class="modal-overlay" id="confirm-overlay" onclick="if(event.target===this)closeConfirm()">
+  <div class="modal">
+    <div class="confirm-ico" id="confirm-ico"><i class="fas fa-triangle-exclamation"></i></div>
+    <div class="modal-title" id="confirm-title" style="margin-bottom:8px;">تأكيد الحذف</div>
+    <p class="confirm-msg" id="confirm-msg">هل أنت متأكد من إتمام هذا الإجراء؟</p>
+    <div class="acts" style="margin-top:16px;">
+      <button class="ba" onclick="closeConfirm()"><i class="fas fa-xmark"></i> إلغاء</button>
+      <button class="ba danger" id="confirm-ok-btn" onclick="confirmYes()"><i class="fas fa-trash"></i> حذف</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ══ STATE ══
+const ST={
+  type:'link', style:'bw', modShape:'square', frame:'none',
+  logoPos:'cc', logoShape:'rounded', logoSize:22,
+  qrSize:260, ecLevel:'H', bgColor:'#ffffff', modScale:100, logoBg:true,
+};
+const STYLES={
+  mix:{c:['#FF00FF','#00FFFF','#00FF00']},
+  bw:{c:['#000000']},
+  tl:{c:['#1E88E5','#1565C0']},
+  fi:{c:['#FF4500','#FF8C00','#FFD700']},
+  oc:{c:['#0099F7','#00E5FF']},
+  pu:{c:['#7B2FF7','#C850C0','#F72585']},
+  gd:{c:['#FFD700','#FFA500','#FF6B00']},
+  eo:{c:['#11998E','#38EF7D']},
+  pi:{c:['#F72585','#FF8FAB']},
+  custom:{c:['#2196F3','#1E88E5']},
+};
+const TICO={link:'fa-link',whatsapp:'fa-whatsapp fab',text:'fa-font',phone:'fa-phone',email:'fa-envelope',location:'fa-map-marker-alt'};
+const TCOL={link:'#2196F3',whatsapp:'#25D366',text:'#2196F3',phone:'#2196F3',email:'#F72585',location:'#FF6B35'};
+
+let logoURL=null, lastData=null, modalCv=null, modalEntry=null;
+let scanLog=[];
+try{ scanLog=JSON.parse(localStorage.getItem('qr_log3')||'[]'); }catch(e){ scanLog=[]; }
+
+// الوضع الافتراضي عند أول تشغيل = نهاري. لو المستخدم بدّل الوضع يتم حفظه ويُسترجع في المرة الجايه.
+let darkMode = (localStorage.getItem('qr_theme') === 'dark');
+
+// ══ THEME ══
+function toggleTheme(){
+  darkMode=!darkMode;
+  document.documentElement.setAttribute('data-theme',darkMode?'':'light');
+  document.getElementById('theme-btn').innerHTML=`<i class="fas fa-${darkMode?'moon':'sun'}"></i>`;
+  try{ localStorage.setItem('qr_theme', darkMode?'dark':'light'); }catch(e){}
+}
+// مزامنة أيقونة الزر مع الوضع الفعلي عند التحميل
+document.getElementById('theme-btn').innerHTML = `<i class="fas fa-${darkMode?'moon':'sun'}"></i>`;
+
+// ══ PAGES ══
+function openPage(p){
+  ['create','preview','log'].forEach(x=>{
+    document.getElementById('pg-'+x).classList.toggle('active',x===p);
+    document.getElementById('nav-'+x).classList.toggle('active',x===p);
+  });
+  if(p==='log') renderLog();
+}
+
+// ══ SELECTORS ══
+function selType(el,t){
+  document.querySelectorAll('.tc').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on'); ST.type=t;
+  ['link','whatsapp','text','phone','email','location'].forEach(x=>
+    document.getElementById('inp-'+x).style.display=x===t?'block':'none');
+}
+function selStyle(el,s){ document.querySelectorAll('.sc').forEach(c=>c.classList.remove('on')); el.classList.add('on'); ST.style=s; }
+function applyCustom(){
+  STYLES.custom.c=[document.getElementById('cc1').value, document.getElementById('cc2').value];
+  ST.style='custom';
+  document.querySelectorAll('.sc').forEach(c=>c.classList.remove('on'));
+  showToast('<i class="fas fa-circle-check"></i> تم تطبيق الألوان');
+}
+function selBg(el,c){ document.querySelectorAll('.bgc').forEach(x=>x.classList.remove('on')); if(el)el.classList.add('on'); ST.bgColor=c; }
+function selMod(el,s){ document.querySelectorAll('.modc').forEach(c=>c.classList.remove('on')); el.classList.add('on'); ST.modShape=s; }
+function selFrame(el,f){ document.querySelectorAll('.frc').forEach(c=>c.classList.remove('on')); el.classList.add('on'); ST.frame=f; }
+function selPos(el,p){ document.querySelectorAll('.posc').forEach(c=>c.classList.remove('on')); el.classList.add('on'); ST.logoPos=p; }
+function selLS(el,s){ document.querySelectorAll('.lsc').forEach(c=>c.classList.remove('on')); el.classList.add('on'); ST.logoShape=s; }
+function selSz(el,s){ document.querySelectorAll('.szc').forEach(c=>c.classList.remove('on')); el.classList.add('on'); ST.qrSize=s; }
+
+// ══ LOGO ══
+function handleLogo(inp){
+  const f=inp.files[0]; if(!f) return;
+  const reader=new FileReader();
+  reader.onload=function(e){
+    logoURL=e.target.result;
+    document.getElementById('logo-ph').style.display='none';
+    const img=document.getElementById('lp-img');
+    img.src=logoURL; img.style.display='block';
+    document.getElementById('lp-name').textContent='✓ '+f.name;
+    document.getElementById('lp-name').style.display='block';
+    showToast('<i class="fas fa-circle-check"></i> تم رفع اللوجو');
+  };
+  reader.readAsDataURL(f);
+}
+function doClearLogo(){
+  logoURL=null;
+  document.getElementById('logo-inp').value='';
+  document.getElementById('logo-ph').style.display='block';
+  document.getElementById('lp-img').style.display='none';
+  document.getElementById('lp-name').style.display='none';
+  showToast('<i class="fas fa-circle-check"></i> تم حذف اللوجو');
+}
+function askDeleteLogo(){
+  if(!logoURL) return showToast('لا يوجد لوجو مرفوع حالياً','err');
+  askConfirm({
+    icon:'fa-image',
+    title:'حذف اللوجو',
+    msg:'هل تريد حذف اللوجو المرفوع؟ لن يظهر في الباركود بعد الحذف.',
+    onYes: doClearLogo
+  });
+}
+
+// ══ BUILD DATA ══
+function buildData(){
+  switch(ST.type){
+    case 'link': return document.getElementById('v-link').value.trim()||'https://example.com';
+    case 'whatsapp':{
+      const n=document.getElementById('v-wa').value.trim().replace(/\D/g,'');
+      const m=encodeURIComponent(document.getElementById('v-wa-msg').value.trim());
+      return 'https://wa.me/'+n+(m?'?text='+m:'');
+    }
+    case 'text': return document.getElementById('v-text').value.trim()||'مرحباً';
+    case 'phone': return 'tel:'+document.getElementById('v-phone').value.trim();
+    case 'email':{
+      const e=document.getElementById('v-email').value.trim();
+      const s=document.getElementById('v-email-sub').value.trim();
+      return 'mailto:'+e+(s?'?subject='+encodeURIComponent(s):'');
+    }
+    case 'location':{
+      const la=document.getElementById('v-lat').value.trim();
+      const lo=document.getElementById('v-lng').value.trim();
+      return 'https://maps.google.com/?q='+la+','+lo;
+    }
+  }
+  return 'https://example.com';
+}
+
+// ══ CORE: DRAW QR TO CANVAS (BULLETPROOF) ══
+function drawQR(canvas, data, opts){
+  return new Promise((resolve, reject) => {
+    const o={...ST,...opts};
+    const qrSize = o.qrSize || 260;
+    const style = o.style || 'bw';
+    const modShape = o.modShape || 'square';
+    const bgColor = o.bgColor || '#ffffff';
+    const modScale = (o.modScale || 100) / 100;
+    const lURL = (opts && opts.logoURL !== undefined) ? opts.logoURL : logoURL;
+    const logoPos = o.logoPos || 'cc';
+    const logoShape = o.logoShape || 'rounded';
+    const lSize = o.logoSize || 22;
+    const logoBg = o.logoBg !== undefined ? o.logoBg : true;
+
+    const ecLevels = ['H','Q','M','L'];
+    let ecLevel = o.ecLevel || 'H';
+    const startIndex = ecLevels.indexOf(ecLevel);
+    const beginIndex = startIndex === -1 ? 0 : startIndex;
+
+    function tryGenerate(levelIndex) {
+      if (levelIndex >= ecLevels.length) {
+        reject(new Error('البيانات طويلة جداً حتى مع أقل مستوى تصحيح.'));
+        return;
+      }
+      const currentEc = ecLevels[levelIndex];
+      const qr = qrcode(0, currentEc);
+      try {
+        qr.addData(data);
+        qr.make();
+      } catch(e) {
+        tryGenerate(levelIndex + 1);
+        return;
+      }
+
+      const cc = qr.getModuleCount();
+      const cs = Math.floor(qrSize / cc);
+      const actual = cs * cc;
+      canvas.width = actual; canvas.height = actual;
+      const ctx = canvas.getContext('2d');
+
+      if (bgColor === 'transparent') {
+        ctx.clearRect(0, 0, actual, actual);
+      } else {
+        ctx.fillStyle = bgColor;
+        ctx.fillRect(0, 0, actual, actual);
+      }
+
+      const cols = (STYLES[style] || STYLES.bw).c.map(h => hrgb(h));
+
+      for (let r = 0; r < cc; r++) {
+        for (let c = 0; c < cc; c++) {
+          if (!qr.isDark(r, c)) continue;
+          const t = (c + r) / (cc * 2);
+          const col = style === 'bw' ? { r: 0, g: 0, b: 0 } : lerp(cols, t);
+          ctx.fillStyle = `rgb(${col.r},${col.g},${col.b})`;
+          const x = c * cs, y = r * cs;
+          const sz = cs * modScale;
+          const off = (cs - sz) / 2;
+          drawMod(ctx, x + off, y + off, sz, modShape, r, c, cc);
+        }
+      }
+
+      if (!lURL) {
+        resolve(canvas);
+        return;
+      }
+
+      const img = new Image();
+      img.onload = function() {
+        const lw = actual * (lSize / 100);
+        const pos = getPos(actual, lw, logoPos);
+        if (logoBg) {
+          ctx.fillStyle = '#ffffff';
+          if (logoShape === 'circle') {
+            ctx.beginPath();
+            ctx.arc(pos.x + lw / 2, pos.y + lw / 2, lw / 2 + 5, 0, Math.PI * 2);
+            ctx.fill();
+          } else {
+            const rad = logoShape === 'rounded' ? 10 : 2;
+            rr(ctx, pos.x - 5, pos.y - 5, lw + 10, lw + 10, rad);
+            ctx.fill();
+          }
+        }
+        if (logoShape === 'circle') {
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(pos.x + lw / 2, pos.y + lw / 2, lw / 2, 0, Math.PI * 2);
+          ctx.clip();
+        }
+        ctx.drawImage(img, pos.x, pos.y, lw, lw);
+        if (logoShape === 'circle') ctx.restore();
+        resolve(canvas);
+      };
+      img.onerror = function() {
+        // فشل تحميل اللوجو، نستمر بدونه
+        resolve(canvas);
+      };
+      img.src = lURL;
+    }
+
+    tryGenerate(beginIndex);
+  });
+}
+
+function drawMod(ctx,x,y,s,shape,r,c,cc){
+  const isCorner=(r<7&&c<7)||(r<7&&c>=cc-7)||(r>=cc-7&&c<7);
+  if(shape==='dots'||(shape==='classy'&&!isCorner)){
+    ctx.beginPath(); ctx.arc(x+s/2,y+s/2,s/2*.88,0,Math.PI*2); ctx.fill();
+  } else if(shape==='rounded'){
+    rr(ctx,x,y,s,s,s*.32); ctx.fill();
+  } else {
+    ctx.fillRect(x,y,s,s);
+  }
+}
+
+// مواضع اللوجو التسعة (شبكة 3×3 كاملة حتى يقع زر "المنتصف" فعلياً في منتصف الشبكة)
+function getPos(total,lw,pos){
+  const pad=total*.04;
+  const midXY=(total-lw)/2;
+  const m={
+    tl:[pad,pad], tc:[midXY,pad], tr:[total-lw-pad,pad],
+    ml:[pad,midXY], cc:[midXY,midXY], mr:[total-lw-pad,midXY],
+    bl:[pad,total-lw-pad], bc:[midXY,total-lw-pad], br:[total-lw-pad,total-lw-pad]
+  };
+  const [x,y]=m[pos]||m.cc;
+  return{x,y};
+}
+
+function rr(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y); ctx.lineTo(x+w-r,y); ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+  ctx.lineTo(x+w,y+h-r); ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+  ctx.lineTo(x+r,y+h); ctx.quadraticCurveTo(x,y+h,x,y+h-r);
+  ctx.lineTo(x,y+r); ctx.quadraticCurveTo(x,y,x+r,y);
+  ctx.closePath();
+}
+function hrgb(h){return{r:parseInt(h.slice(1,3),16),g:parseInt(h.slice(3,5),16),b:parseInt(h.slice(5,7),16)};}
+function lerp(cols,t){
+  if(cols.length===1)return cols[0];
+  const seg=1/(cols.length-1),i=Math.min(Math.floor(t/seg),cols.length-2),lt=(t-i*seg)/seg,a=cols[i],b=cols[i+1];
+  return{r:Math.round(a.r+(b.r-a.r)*lt),g:Math.round(a.g+(b.g-a.g)*lt),b:Math.round(a.b+(b.b-a.b)*lt)};
+}
+
+// ══ INJECT FRAME (معاينة داخل الصفحة) ══
+function injectFrame(container, canvas, frameType){
+  const ar=document.getElementById('frame-ar')?.value||'إمسحني ضوئياً! ✦';
+  const en=document.getElementById('frame-en')?.value||'Scan me!';
+  canvas.style.display='block'; canvas.style.borderRadius='6px';
+
+  container.innerHTML='';
+  const wrapper=document.createElement('div');
+  if(frameType!=='none') wrapper.className='frame-'+frameType;
+  if(frameType==='bag'){
+    const d1=document.createElement('div'); d1.className='fd1';
+    const d2=document.createElement('div'); d2.className='fd2';
+    wrapper.appendChild(d1); wrapper.appendChild(d2);
+  }
+  wrapper.appendChild(canvas);
+  const arDiv=document.createElement('div'); arDiv.className='qrl ar'; arDiv.textContent=ar;
+  const enDiv=document.createElement('div'); enDiv.className='qrl en'; enDiv.textContent=en;
+  wrapper.appendChild(arDiv); wrapper.appendChild(enDiv);
+  if(frameType==='none') container.appendChild(canvas), container.appendChild(arDiv), container.appendChild(enDiv);
+  else container.appendChild(wrapper);
+}
+
+// ══ GENERATE QR (BULLETPROOF) ══
+async function generateQR(){
+  const data=buildData();
+  const name=document.getElementById('v-name').value.trim()||'باركود جديد';
+  ST.ecLevel=document.getElementById('ec-level').value;
+  ST.modScale=parseInt(document.getElementById('mod-scale').value)||100;
+  ST.logoSize=parseInt(document.getElementById('logo-size').value)||22;
+  ST.logoBg=document.getElementById('logo-bg').checked;
+
+  const btn=document.getElementById('gen-btn');
+  btn.innerHTML='<div class="spinner" style="display:inline-block;margin-left:8px;"></div> جاري الإنشاء...';
+  btn.disabled=true;
+
+  await new Promise(r=>setTimeout(r,50));
+
+  try{
+    const cv=document.createElement('canvas');
+    await drawQR(cv, data, {logoURL});
+
+    const center=document.getElementById('preview-center');
+    injectFrame(center, cv, ST.frame);
+
+    lastData={data,name,type:ST.type,size:cv.width, cv};
+    document.getElementById('inf-name').textContent=name;
+    document.getElementById('inf-url').textContent=data;
+    document.getElementById('inf-date').textContent=new Date().toLocaleString('ar-EG');
+    document.getElementById('inf-size').textContent=cv.width+'×'+cv.height+' px';
+    document.getElementById('qr-result').style.display='block';
+    document.getElementById('qr-empty').style.display='none';
+
+    // حفظ في السجل بشكل آمن (لا يوقف الانتقال للمعاينة حتى لو فشل الحفظ)
+    saveLog({data,name,type:ST.type,style:ST.style,frame:ST.frame,date:new Date().toISOString(),size:cv.width,
+      hasLogo:!!logoURL, opts:{...ST}});
+
+    openPage('preview');
+    showToast('<i class="fas fa-circle-check"></i> تم إنشاء الباركود بنجاح!');
+  } catch(err){
+    let msg = err.message || 'حدث خطأ غير معروف';
+    if (msg.includes('طويل') || msg.includes('overflow') || msg.includes('length')) {
+      msg = 'المحتوى طويل جداً، جرب تقليل النص أو اختيار مستوى تصحيح أقل.';
+    }
+    showToast('<i class="fas fa-circle-exclamation"></i> ' + msg, 'err');
+  }
+
+  btn.innerHTML='<i class="fas fa-magic"></i> إنشاء الباركود الآن';
+  btn.disabled=false;
+}
+
+// ══ DOWNLOAD ══
+function dlQR(){
+  if(!lastData?.cv) return showToast('⚠️ أنشئ باركود أولاً','err');
+  trigDL(lastData.cv,(lastData.name||'qr')+'.png');
+  showToast('<i class="fas fa-circle-check"></i> تم تحميل الباركود بنجاح');
+}
+function trigDL(cv,name){const a=document.createElement('a');a.download=name;a.href=cv.toDataURL('image/png');a.click();}
+
+// ══ رسم إطارات احترافية لكل نوع عند "تحميل مع الإطار" ══
+function drawStarShape(ctx,cx,cy,r,color,alpha){
+  ctx.save();
+  ctx.globalAlpha = alpha!==undefined?alpha:1;
+  ctx.fillStyle=color;
+  ctx.beginPath();
+  for(let i=0;i<10;i++){
+    const ang = Math.PI/5*i - Math.PI/2;
+    const radius = i%2===0? r : r*0.42;
+    const x = cx + radius*Math.cos(ang);
+    const y = cy + radius*Math.sin(ang);
+    if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+  }
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+function drawRibbonBow(ctx,cx,cy,scale,color){
+  ctx.save();
+  ctx.fillStyle=color;
+  ctx.translate(cx,cy); ctx.scale(scale,scale);
+  // فراشة الشريط (يمين ويسار) + عقدة وسطى
+  ctx.beginPath(); ctx.ellipse(-14,0,16,11,-0.4,0,Math.PI*2); ctx.fill();
+  ctx.beginPath(); ctx.ellipse(14,0,16,11,0.4,0,Math.PI*2); ctx.fill();
+  ctx.beginPath(); ctx.arc(0,0,7,0,Math.PI*2); ctx.fill();
+  ctx.restore();
+}
+function drawSteam(ctx,x,y,color){
+  ctx.save();
+  ctx.strokeStyle=color; ctx.lineWidth=4; ctx.lineCap='round'; ctx.globalAlpha=.55;
+  for(let i=0;i<2;i++){
+    const ox=x+i*16-8;
+    ctx.beginPath();
+    ctx.moveTo(ox,y);
+    ctx.bezierCurveTo(ox-10,y-16,ox+10,y-28,ox,y-44);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+function drawChip(ctx,x,y,w,h,color){
+  ctx.save();
+  ctx.fillStyle=color;
+  rr(ctx,x,y,w,h,4); ctx.fill();
+  ctx.strokeStyle='rgba(0,0,0,.25)'; ctx.lineWidth=1.5;
+  ctx.beginPath(); ctx.moveTo(x+w*0.35,y); ctx.lineTo(x+w*0.35,y+h); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x+w*0.65,y); ctx.lineTo(x+w*0.65,y+h); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x,y+h*0.5); ctx.lineTo(x+w,y+h*0.5); ctx.stroke();
+  ctx.restore();
+}
+function drawCameraDot(ctx,cx,cy,r,color){
+  ctx.save();
+  ctx.strokeStyle=color; ctx.lineWidth=3;
+  ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2); ctx.stroke();
+  ctx.beginPath(); ctx.arc(cx,cy,r*0.35,0,Math.PI*2); ctx.fillStyle=color; ctx.fill();
+  ctx.restore();
+}
+
+async function dlWithFrame(){
+  if(!lastData?.cv) return showToast('⚠️ أنشئ باركود أولاً','err');
+  const src=lastData.cv;
+  const f=ST.frame;
+  const pad=56, topPad = (f==='gift'||f==='bag'||f==='coffee') ? 84 : 56;
+  const lh=64;
+  const out=document.createElement('canvas');
+  out.width=src.width+pad*2;
+  out.height=src.height+topPad+pad+lh;
+  const ctx=out.getContext('2d');
+  const W=out.width, H=out.height;
+  const darkFrames=['coffee','card','ig','phone','star'];
+  const ar=document.getElementById('frame-ar')?.value||'إمسحني ضوئياً! ✦';
+  const en=document.getElementById('frame-en')?.value||'Scan me!';
+
+  // خلفية أساسية لكل نوع إطار
+  if(f==='coffee'){
+    const g=ctx.createLinearGradient(0,0,0,H); g.addColorStop(0,'#4A2A0C'); g.addColorStop(1,'#2B1503');
+    ctx.fillStyle=g;
+  } else if(f==='card'){
+    const g=ctx.createLinearGradient(0,0,W,H); g.addColorStop(0,'#1a1a2e'); g.addColorStop(1,'#16213e');
+    ctx.fillStyle=g;
+  } else if(f==='ig'){
+    const g=ctx.createLinearGradient(0,0,W,H); g.addColorStop(0,'#833ab4'); g.addColorStop(.5,'#fd1d1d'); g.addColorStop(1,'#fcb045');
+    ctx.fillStyle=g;
+  } else if(f==='phone'){
+    ctx.fillStyle='#1A1A2E';
+  } else if(f==='star'){
+    const g=ctx.createLinearGradient(0,0,W,H); g.addColorStop(0,'#0F2027'); g.addColorStop(.5,'#203A43'); g.addColorStop(1,'#2C5364');
+    ctx.fillStyle=g;
+  } else if(f==='gift'){
+    ctx.fillStyle='#ffffff';
+  } else if(f==='bag'){
+    ctx.fillStyle='#FFFDF8';
+  } else {
+    ctx.fillStyle='#ffffff';
+  }
+  rr(ctx,0,0,W,H,26); ctx.fill();
+
+  // حدود مميزة لكل نوع
+  if(f==='gift'){ ctx.strokeStyle='#F72585'; ctx.lineWidth=5; rr(ctx,4,4,W-8,H-8,24); ctx.stroke(); }
+  if(f==='bag'){ ctx.strokeStyle='#E4D2A8'; ctx.lineWidth=3; rr(ctx,4,4,W-8,H-8,24); ctx.stroke(); }
+  if(f==='phone'){ ctx.strokeStyle='#333'; ctx.lineWidth=8; rr(ctx,4,4,W-8,H-8,34); ctx.stroke(); }
+
+  // ديكورات مميزة توضح فكرة كل إطار بدقة
+  if(f==='bag'){
+    // مقبض حقيبة تسوق
+    ctx.strokeStyle='#C0A060'; ctx.lineWidth=7; ctx.lineCap='round';
+    ctx.beginPath(); ctx.arc(W/2-26,26,20,Math.PI,Math.PI*1.85); ctx.stroke();
+    ctx.beginPath(); ctx.arc(W/2+26,26,20,Math.PI*1.15,Math.PI*2); ctx.stroke();
+    ctx.fillStyle='#2196F3';
+    ctx.beginPath(); ctx.arc(W/2-40,30,7,0,Math.PI*2); ctx.fill();
+    ctx.beginPath(); ctx.arc(W/2+40,30,7,0,Math.PI*2); ctx.fill();
+  }
+  if(f==='gift'){
+    drawRibbonBow(ctx,W/2,32,1,'#F72585');
+    ctx.strokeStyle='#F72585'; ctx.lineWidth=10;
+    ctx.beginPath(); ctx.moveTo(W/2,50); ctx.lineTo(W/2,H-lh-10); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(24,topPad-14); ctx.lineTo(W-24,topPad-14); ctx.stroke();
+  }
+  if(f==='coffee'){
+    drawSteam(ctx,W/2,topPad-30,'#FFD9A0');
+    ctx.fillStyle='#FFD9A0'; ctx.font='bold 15px Cairo'; ctx.textAlign='center';
+    ctx.fillText('☕ ركن القهوة', W/2, topPad-4);
+  }
+  if(f==='phone'){
+    // نوتش أعلى
+    ctx.fillStyle='#000'; rr(ctx,W/2-46,18,92,16,8); ctx.fill();
+    ctx.fillStyle='#444'; ctx.beginPath(); ctx.arc(W/2+30,26,4,0,Math.PI*2); ctx.fill();
+    // زر هوم أسفل
+    ctx.strokeStyle='#555'; ctx.lineWidth=3;
+    ctx.beginPath(); ctx.arc(W/2,H-lh/2-6,16,0,Math.PI*2); ctx.stroke();
+  }
+  if(f==='card'){
+    drawChip(ctx,34,topPad-46,44,32,'#E5C158');
+    ctx.fillStyle='rgba(255,255,255,.5)'; ctx.font='bold 13px Cairo'; ctx.textAlign='right';
+    ctx.fillText('•••• •••• •••• ٤٢١٧', W-30, topPad-16);
+  }
+  if(f==='ig'){
+    drawCameraDot(ctx,W-40,40,12,'rgba(255,255,255,.9)');
+    ctx.fillStyle='rgba(255,255,255,.9)';
+    rr(ctx,20,20,26,26,8); ctx.globalAlpha=.001; ctx.fill(); ctx.globalAlpha=1;
+    ctx.strokeStyle='rgba(255,255,255,.9)'; ctx.lineWidth=3; rr(ctx,20,20,26,26,8); ctx.stroke();
+  }
+  if(f==='star'){
+    const starColors=['#FFD700','#FFFFFF','#FFD700','#FFFFFF','#FFD700'];
+    const positions=[[30,26],[W-34,32],[W/2-60,20],[W/2+70,26],[46,H-lh-14],[W-50,H-lh-18]];
+    positions.forEach((p,i)=> drawStarShape(ctx,p[0],p[1],6,starColors[i%starColors.length],.85));
+  }
+
+  // رسم الباركود نفسه في المنتصف
+  ctx.drawImage(src,pad,topPad,src.width,src.height);
+
+  // النص السفلي
+  ctx.textAlign='center';
+  ctx.fillStyle = darkFrames.includes(f) ? '#ffffff' : '#333333';
+  ctx.font='bold 20px Cairo';
+  ctx.fillText(ar, W/2, topPad+src.height+30);
+  ctx.font='12px Cairo';
+  ctx.fillStyle = darkFrames.includes(f) ? 'rgba(255,255,255,.7)' : '#888888';
+  ctx.fillText(en, W/2, topPad+src.height+50);
+
+  trigDL(out,'framed-qr.png');
+  showToast('<i class="fas fa-circle-check"></i> تم تحميل الباركود مع الإطار');
+}
+
+function shareQR(){
+  if(!lastData?.cv) return showToast('⚠️ أنشئ باركود أولاً','err');
+  if(navigator.share){
+    lastData.cv.toBlob(async blob=>{
+      try{await navigator.share({title:lastData.name,files:[new File([blob],'qr.png',{type:'image/png'})]});}
+      catch{copyLink();}
+    });
+  } else copyLink();
+}
+function copyLink(){
+  if(!lastData) return showToast('⚠️ أنشئ باركود أولاً','err');
+  navigator.clipboard.writeText(lastData.data).then(()=>showToast('<i class="fas fa-circle-check"></i> تم نسخ الرابط'));
+}
+
+// ══ LOG (تخزين آمن يمنع تجاوز سعة التخزين) ══
+function saveLog(e){
+  // لا نخزن صورة اللوجو الكاملة (base64) داخل السجل حتى لا نتجاوز سعة localStorage
+  const entry = {...e};
+  delete entry.logoURL;
+  scanLog.unshift(entry);
+  if(scanLog.length>60) scanLog=scanLog.slice(0,60);
+  try{
+    localStorage.setItem('qr_log3', JSON.stringify(scanLog));
+  }catch(err){
+    // لو امتلأت المساحة، نقلل عدد العناصر المحفوظة تدريجياً ونعيد المحاولة بهدوء دون كسر التطبيق
+    try{
+      scanLog = scanLog.slice(0, 15);
+      localStorage.setItem('qr_log3', JSON.stringify(scanLog));
+    }catch(err2){
+      console.warn('تعذر حفظ السجل محلياً:', err2);
+    }
+  }
+  updBadge();
+}
+function renderLog(){
+  const list=document.getElementById('log-list');
+  if(!scanLog.length){list.innerHTML='<div class="empty-s"><i class="fas fa-clipboard-list"></i><p>لا يوجد باركودات بعد</p></div>';updStats();return;}
+  list.innerHTML=scanLog.map((e,i)=>`
+    <div class="le" onclick="openEntry(${i})">
+      <div class="le-ico" style="background:${TCOL[e.type]||'#666'}22;color:${TCOL[e.type]||'#666'}">
+        <i class="fas ${TICO[e.type]?.replace('fab ','')||'fa-qrcode'}"></i>
+      </div>
+      <div class="le-info">
+        <div class="le-name">${e.name}</div>
+        <div class="le-meta">${e.data.slice(0,50)}${e.data.length>50?'...':''}</div>
+      </div>
+      <div class="le-time">${tAgo(e.date)}</div>
+    </div>`).join('');
+  updStats();
+}
+function updStats(){
+  const today=new Date().toDateString();
+  document.getElementById('st-tot').textContent=scanLog.length;
+  document.getElementById('st-day').textContent=scanLog.filter(e=>new Date(e.date).toDateString()===today).length;
+  document.getElementById('st-typ').textContent=new Set(scanLog.map(e=>e.type)).size;
+}
+function askClearLog(){
+  if(!scanLog.length) return showToast('السجل فارغ');
+  askConfirm({
+    icon:'fa-clock-rotate-left',
+    title:'مسح السجل بالكامل',
+    msg:'سيتم حذف كل عناصر السجل نهائياً ولا يمكن التراجع عن هذا الإجراء.',
+    onYes: doClearLog
+  });
+}
+function doClearLog(){
+  scanLog=[];
+  try{ localStorage.setItem('qr_log3','[]'); }catch(e){}
+  renderLog(); updBadge();
+  showToast('<i class="fas fa-circle-check"></i> تم مسح السجل');
+}
+function updBadge(){
+  document.getElementById('log-dot').classList.toggle('show',scanLog.length>0);
+}
+function tAgo(d){const n=new Date(),t=new Date(d),diff=Math.floor((n-t)/1000);if(diff<60)return 'الآن';if(diff<3600)return Math.floor(diff/60)+' د';if(diff<86400)return Math.floor(diff/3600)+' س';return Math.floor(diff/86400)+' ي';}
+
+// ══ LOG ENTRY MODAL ══
+async function openEntry(i){
+  const e=scanLog[i]; if(!e) return;
+  modalEntry=e;
+  document.getElementById('modal-title').textContent=e.name;
+  document.getElementById('modal-info').innerHTML=`
+    <div class="info-item"><i class="fas fa-link"></i><div class="info-txt"><div class="info-lbl">المحتوى</div><div class="info-val">${e.data}</div></div></div>
+    <div class="info-item"><i class="fas fa-calendar"></i><div class="info-txt"><div class="info-lbl">التاريخ</div><div class="info-val">${new Date(e.date).toLocaleString('ar-EG')}</div></div></div>`;
+  const cv=document.createElement('canvas');
+  const opts=e.opts?{...e.opts,qrSize:220}:{qrSize:220,ecLevel:'H',style:e.style||'bw',modShape:'square',logoPos:'cc',logoShape:'rounded',logoSize:22,logoBg:true,bgColor:'#ffffff',modScale:100};
+  // اللوجو غير محفوظ داخل السجل (لتفادي امتلاء التخزين)، لذلك تُعرض المعاينة بدونه
+  await drawQR(cv, e.data, {...opts, logoURL:null});
+  modalCv=cv;
+  const area=document.getElementById('modal-qr-area');
+  area.innerHTML=''; cv.style.borderRadius='8px'; area.appendChild(cv);
+  document.getElementById('modal-overlay').classList.add('open');
+}
+function closeModal(){ document.getElementById('modal-overlay').classList.remove('open'); }
+function dlModal(){
+  if(modalCv) trigDL(modalCv,(modalEntry?.name||'qr')+'.png');
+  showToast('<i class="fas fa-circle-check"></i> تم تحميل الباركود');
+}
+function copyModalLink(){
+  if(modalEntry) navigator.clipboard.writeText(modalEntry.data).then(()=>showToast('<i class="fas fa-circle-check"></i> تم النسخ'));
+}
+
+// ══ CONFIRM MODAL (رسالة تأكيد منبثقة احترافية بدل confirm() العادية) ══
+let confirmCallback=null;
+function askConfirm(opts){
+  document.getElementById('confirm-ico').innerHTML=`<i class="fas ${opts.icon||'fa-triangle-exclamation'}"></i>`;
+  document.getElementById('confirm-title').textContent=opts.title||'تأكيد الحذف';
+  document.getElementById('confirm-msg').textContent=opts.msg||'هل أنت متأكد من إتمام هذا الإجراء؟';
+  confirmCallback=opts.onYes||null;
+  document.getElementById('confirm-overlay').classList.add('open');
+}
+function closeConfirm(){
+  document.getElementById('confirm-overlay').classList.remove('open');
+  confirmCallback=null;
+}
+function confirmYes(){
+  const cb=confirmCallback;
+  closeConfirm();
+  if(cb) cb();
+}
+
+// ══ TOAST (تدعم أيقونات Font Awesome احترافية بدل الإيموجي) ══
+let tT;
+function showToast(msg,type=''){
+  const t=document.getElementById('toast');
+  t.innerHTML=msg; t.className='show'+(type?' '+type:'');
+  clearTimeout(tT); tT=setTimeout(()=>t.className='',2600);
+}
+
+// ══ PREVIEW CANVASES ══
+function drawPreview(id,shape){
+  const cv=document.getElementById('prev-'+id); if(!cv) return;
+  const ctx=cv.getContext('2d');
+  ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--s2')||'#1A2235';
+  ctx.fillRect(0,0,32,32);
+  const g=[[1,1,1],[1,0,1],[1,1,1]];
+  const cs=9;
+  g.forEach((row,r)=>row.forEach((v,c)=>{
+    if(!v) return;
+    ctx.fillStyle='#2196F3';
+    const x=2+c*cs, y=2+r*cs;
+    if(shape==='dots'){ctx.beginPath();ctx.arc(x+cs/2,y+cs/2,cs/2*.85,0,Math.PI*2);ctx.fill();}
+    else if(shape==='rounded'){rr(ctx,x,y,cs,cs,3);ctx.fill();}
+    else{ctx.fillRect(x,y,cs,cs);}
+  }));
+}
+['square','rounded','dots','classy'].forEach(s=>drawPreview(s,s));
+
+updBadge();
+</script>
+</body>
+</html>
